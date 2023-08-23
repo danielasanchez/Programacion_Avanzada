@@ -13,3 +13,5 @@ class Perro():
         self.raza=raza
         self.edad=edad
         print("Objeto Creado")
+
+perrito1=Perro("Whisky","Chihuahua",11)
