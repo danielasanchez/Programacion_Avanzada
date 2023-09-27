@@ -1,11 +1,17 @@
-from abc import ABC, abstractmethod
+"""
+@author: Daniela Sanchez
+
+"""
+
+from abc import ABC, abstractmethod #1
 #Abstract Base Classes
-class Persona(ABC):
+
+class Persona(ABC):#2
     def __init__(self,nombre,fechanacimiento):
         self.nombre=nombre
         self.fechanacimiento=fechanacimiento
         print("Objeto creado")
-    @abstractmethod
+    @abstractmethod#3
     def metodo(self):
         print("Hola desde Persona")
 
@@ -31,3 +37,7 @@ class Empleado(Persona):
 alumno1=Alumno("Juan Peréz","09/22/2005","Inteligencia de Negocios",[100,97,95])
 empleado1=Empleado("Carlos Fernández","01/07/2005","Coordinador",1500)
 empleado1.metodo()
+
+
+
+

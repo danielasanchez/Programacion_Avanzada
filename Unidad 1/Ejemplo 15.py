@@ -2,7 +2,7 @@
 @author: Daniela Sanchez
 
 """
-
+#herencia
 class Persona():
     def __init__(self,nombre,fechanacimiento):
         self.nombre=nombre
