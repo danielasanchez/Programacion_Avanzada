@@ -2,7 +2,7 @@
 """
 Created on Wed May 17 10:07:39 2023
 
-@author: AlumnoFCA
+@author: Daniela
 """
 
 from tkinter import *

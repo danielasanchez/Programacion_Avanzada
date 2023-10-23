@@ -7,37 +7,30 @@ Created on Mon Mar 27 00:48:54 2023
 
 from tkinter import *
 
-def obtener():
-    print(opcion.get())
-
-
 principal = Tk()
 principal.title("Mi primer ventana")
-principal.geometry("380x280+400+200")
+principal.geometry("400x300+400+200")
 principal.config(bg="gray")
 
-opcion=IntVar() 
-opcion.set(4)
+label1 = Label(principal, text="Usuario:")
+label1.place(x=80,y=60)
+label1.config(width=10,bg="gray")
+
+input1 = Entry(principal, highlightthickness=4, highlightcolor="blue",
+               selectbackground="pink", selectforeground = "green")
+input1.place(x=160,y=60)
 
 
-label1 = Label(principal, text="Respuesta:")
-label1.pack()
-label1.config(width=10,bg="gray",pady=20)
+label2 = Label(principal, text="Contraseña:")
+label2.place(x=80,y=100)
+label2.config(width=10,bg="gray")
 
+# show = establecer el caracter a sustituir los caracteres
+input2 = Entry(principal, highlightthickness=4, highlightcolor="blue",
+               selectbackground="pink", selectforeground = "green",
+               show="*")
 
-opcion1 = Radiobutton(principal,text="opcion 1",
-                      bg="gray",variable=opcion,value=1,
-                      command=obtener).pack()
-opcion2 = Radiobutton(principal,text="opcion 2",
-                      bg="gray",variable=opcion,value=2,
-                      command=obtener).pack()
-opcion3 = Radiobutton(principal,text="opcion 3",
-                      bg="gray",variable=opcion,value=3,
-                      command=obtener).pack()
-opcion4 = Radiobutton(principal,text="opcion 4",
-                      bg="gray",variable=opcion,value=4,
-                      command=obtener).pack()
-
+input2.place(x=160,y=100)
 
 principal.mainloop()
 

@@ -8,51 +8,31 @@ Created on Mon Mar 27 00:48:54 2023
 from tkinter import *
 
 def obtener():
-    print(nombre.get())
-    print(carrera.get())
-    nombre.set("")
-    carrera.set(None)
+    texto=text1.get(1.0,END)
+    print(texto)
+    text1.delete(1.0,END)
 
 
 principal = Tk()
 principal.title("Mi primer ventana")
-principal.geometry("380x380+400+200")
+principal.geometry("380x280+400+200")
 principal.config(bg="gray")
 
-#StringVar, IntVat DoubleVar, BooleanVar
-nombre = StringVar()
-carrera = StringVar() 
-carrera.set("LA")
-
-label1 = Label(principal, text="Alumno:")
-label1.pack()
-label1.config(width=50,bg="gray",pady=20)
-
-nombre.set("Daniela")
-input1 = Entry(principal,textvariable=nombre,width=35).pack()
-
-label2 = Label(principal, text="Carrera:")
-label2.pack()
-label2.config(width=10,bg="gray",pady=20)
+label1 = Label(principal, text="Respuesta:")
+label1.place(x=50,y=60)
+label1.config(width=10,bg="gray")
 
 
-opcion1 = Radiobutton(principal,text="Lic. Inteligencia de Negocios",
-                      bg="gray",variable=carrera,value="LIN",
-                      activebackground="pink",activeforeground="blue",
-                      selectcolor="yellow").pack()
-opcion2 = Radiobutton(principal,text="Lic. Contaduria",
-                      bg="gray",variable=carrera,value="LC",
-                      activebackground="pink",activeforeground="blue",
-                      selectcolor="yellow").pack()
-opcion3 = Radiobutton(principal,text="Lic. Administracion",
-                      bg="gray",variable=carrera,value="LA",
-                      activebackground="pink",activeforeground="blue",
-                      selectcolor="yellow").pack()
-opcion4 = Radiobutton(principal,text="Lic. Negocios Internacionales",
-                      bg="gray",variable=carrera,value="LNI",
-                      activebackground="pink",activeforeground="blue",
-                      selectcolor="yellow").pack()
+text1 = Text(principal, highlightthickness=4, highlightcolor="blue",
+               selectbackground="pink", selectforeground = "green")
+# height = lineas
+# width = caracteres
+# wrap = WORD ,  CHAR o NONE
+text1.config(height=4,width=20,wrap=NONE)
+text1.place(x=130,y=60)
 
+#r.c o END
+text1.insert(1.0,"Hola mundo")
 
 
 boton1 = Button(principal, text="Obtener", bg="gray",
@@ -62,7 +42,7 @@ boton1 = Button(principal, text="Obtener", bg="gray",
                 #state=DISABLED
                 )
 
-boton1.place(x=150,y=280)
+boton1.place(x=170,y=180)
 boton1.config(pady=10,width=10)
 
 

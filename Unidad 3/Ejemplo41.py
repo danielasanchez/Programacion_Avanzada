@@ -2,11 +2,11 @@
 """
 Created on Wed May 17 10:07:39 2023
 
-@author: AlumnoFCA
+@author: Daniela
 """
 
 from tkinter import *
-from ventanitas import ventanita1, ventanita2, ventanita3
+from ventanitasEjemplo1 import ventanita1, ventanita2, ventanita3
 
 principal = Tk()
 principal.title("Mi primer ventana")

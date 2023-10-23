@@ -1,27 +1,34 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Mar 27 00:48:54 2023
+Created on Mon Mar 27 13:48:54 2023
 
-@author: Daniela
+@author: Daniela Sánchez
 """
 
 from tkinter import *
 
 principal = Tk()
 principal.title("Mi primer ventana")
-principal.geometry("400x300+400+200")
-principal.config(bg="gray")
+principal.geometry("800x500+400+200")
 
-label1 = Label(principal, text="Nombre").pack()
+# wraplength = pixeles para salto de linea,
+# justify = alineacion del texto
+label1= Label(principal,text="Hola mundo desde una etiqueta",
+              font=("Arial",12,"bold","underline"),
+              fg="blue",bg="green",height=4, width=40,
+              bd=5,relief="ridge",
+              wraplength=200,justify=CENTER)
 
-# highlightthickness = tamaño del borde al seleccionar
-# highlightcolor = color de borde al seleccionar
-input1 = Entry(principal, 
-               highlightthickness=4, 
-               highlightcolor="blue")
+label1.place(x=100,y=50)
 
-input1.pack()
+label2= Label(principal,text="Hola mundo desde otra etiqueta",
+              font=("Arial",12,"bold","underline"),
+              fg="blue",bg="green",height=4, width=40,
+              bd=5,relief="ridge",
+              wraplength=200,justify=CENTER)
+
+label2.place(x=100,y=150)
+
 
 
 principal.mainloop()
-

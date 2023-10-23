@@ -11,24 +11,18 @@ principal = Tk()
 principal.title("Mi primer ventana")
 principal.geometry("800x500+400+200")
 
-# wraplength = pixeles para salto de linea,
-# justify = alineacion del texto
-label1= Label(principal,text="Hola mundo desde una etiqueta",
-              font=("Arial",12,"bold","underline"),
-              fg="blue",bg="green",height=4, width=40,
-              bd=5,relief="ridge",
-              wraplength=200,justify=CENTER)
+#bd = ancho del borde
+#relief = tipo de borde
+# flat 
+# raised 
+# sunken 
+# groove 
+# ridge
+label1= Label(principal,text="Mi Etiqueta",
+              font=("Arial",16,"bold","underline"),
+              fg="blue",bg="green",height=4, width=20,
+              anchor=SE,bd=5,relief="ridge")
 
-label1.place(x=100,y=50)
-
-label2= Label(principal,text="Hola mundo desde otra etiqueta",
-              font=("Arial",12,"bold","underline"),
-              fg="blue",bg="green",height=4, width=40,
-              bd=5,relief="ridge",
-              wraplength=200,justify=CENTER)
-
-label2.place(x=100,y=150)
-
-
+label1.pack()
 
 principal.mainloop()

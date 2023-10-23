@@ -11,11 +11,11 @@ principal = Tk()
 principal.title("Mi primer ventana")
 principal.geometry("800x500+400+200")
 
-
+#fg = color de la letra
+#bg = color de fondo
 label1= Label(principal,text="Mi Etiqueta",
               font=("Arial",16,"bold","underline"),
-              fg="blue",bg="green",height=4, width=20,
-              anchor=SE,bd=5,relief="ridge",padx=45,pady=10)
+              fg="blue",bg="green")
 
 label1.pack()
 
